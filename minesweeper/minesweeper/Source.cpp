@@ -1,3 +1,6 @@
+// Minesweeper
+// By: Dmitriy Gutnik
+
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
@@ -111,7 +114,7 @@ bool check(int* arr, int height, int length, int bombs)
 }
 void getXandY(int& x, int& y, int HEIGHT, int LENGTH)
 {
-
+	// GETS PROPER X AND Y VALUES FOR VARIOUS PARTS OF PROJECT
 	while (x < 0 || x > LENGTH - 1)
 	{
 		cout << "Enter the x coordinate where you want to explore (0 - " << LENGTH - 1 << "): ";
@@ -125,6 +128,7 @@ void getXandY(int& x, int& y, int HEIGHT, int LENGTH)
 }
 void makeNewGame(int* b, int* r, int HEIGHT, int LENGTH)
 {
+	// MAKES BLANK BOARD READY FOR SETUP, DOES FIRST PRINT
 	for (int y = 0; y < HEIGHT; y++)
 	{
 		for (int x = 0; x < LENGTH; x++)
@@ -139,6 +143,7 @@ void makeNewGame(int* b, int* r, int HEIGHT, int LENGTH)
 }
 void setUpBoard(int* board, int* revealed, int HEIGHT, int LENGTH, int BOMBS)
 {
+	// SETS UP THE BOMBS AND NUMBERS ON THE BOARD
 	int x = -1;
 	int y = -1;
 	getXandY(x, y, HEIGHT, LENGTH);
@@ -184,6 +189,7 @@ void setUpBoard(int* board, int* revealed, int HEIGHT, int LENGTH, int BOMBS)
 }
 int main()
 {
+	// MAIN FUNCTION
 	const int HEIGHT = 9;
 	const int LENGTH = 9;
 	const int BOMBS = 10;
@@ -223,6 +229,5 @@ int main()
 		printBoard(&(board[0][0]), HEIGHT, LENGTH);
 		cout << endl << "YOU GOT PASSED ALL THE MINES! YOU WIN!";
 	}
-
 	return 0;
 }
