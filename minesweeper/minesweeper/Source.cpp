@@ -8,6 +8,7 @@ using namespace std;
 
 void printBoard(int* arr, int height, int length)
 {
+	// PRINTS COMPLETELY OPEN BOARD
 	cout << endl;
 	cout << "   ";
 	for (int i = 0; i < length; i++)
@@ -35,6 +36,7 @@ void printBoard(int* arr, int height, int length)
 }
 void printBoard2(int* arr, int* revealed, int height, int length)
 {
+	// PRINTS PROPERLY REVALED BOARD
 	cout << endl;
 	cout << "   ";
 	for (int i = 0; i < length; i++)
@@ -227,7 +229,7 @@ int main()
 	else
 	{
 		printBoard(&(board[0][0]), HEIGHT, LENGTH);
-		cout << endl << "YOU GOT PASSED ALL THE MINES! YOU WIN!";
+		cout << endl << "YOU GOT PAST ALL THE MINES! YOU WIN!";
 	}
 	return 0;
 }
